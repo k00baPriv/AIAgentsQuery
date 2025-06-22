@@ -233,6 +233,41 @@ The system includes predefined rule categories in the `data_cloud_rules/` folder
    python agent_chain.py
    ```
 
+## Testing the MCP Server
+
+You can test your MCP server independently using the MCP CLI development tools:
+
+```bash
+mcp dev mcp_server.py
+```
+
+This command will start the MCP server in development mode, allowing you to:
+- Test the `get_rules` tool directly
+- Verify rule file access and parsing
+- Debug any issues with the MCP server implementation
+- See detailed logs of tool invocations
+
+### Installing uv (if needed)
+
+The `mcp` command-line tool may require `uv` for optimal performance. To install `uv`:
+
+**On macOS and Linux:**
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**On Windows (PowerShell):**
+```powershell
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+**Using pip:**
+```bash
+pip install uv
+```
+
+After installation, you may need to restart your terminal or add `uv` to your PATH. The `uv` tool provides faster Python package management and is recommended for MCP development workflows.
+
 ## Usage
 
 1. Start the application
