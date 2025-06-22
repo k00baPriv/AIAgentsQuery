@@ -1,0 +1,31 @@
+CONNECTED APP RULES FOR DATA CLOUD
+
+Connected App Configuration:
+- Always use OAuth 2.0 for connected app authentication
+- Configure proper callback URLs for OAuth flows
+- Set appropriate IP restrictions for connected apps
+- Use named credentials to store sensitive authentication data
+
+API Integration Rules:
+- Implement proper rate limiting for API calls
+- Use bulk API for large data operations
+- Handle API errors gracefully with retry mechanisms
+- Monitor API usage and performance metrics
+
+Security Best Practices:
+- Never hardcode client secrets in code
+- Use certificate-based authentication when possible
+- Implement proper session management
+- Log all API access for audit purposes
+
+Integration Guidelines:
+- Test integrations in sandbox environments first
+- Document all integration points and their purposes
+- Implement proper error handling and monitoring
+- Use webhook signatures for secure webhook processing
+
+OAuth Configuration:
+- Configure proper scopes for connected apps
+- Use refresh tokens for long-lived sessions
+- Implement proper token storage and rotation
+- Monitor OAuth token usage and expiration 

@@ -1,0 +1,31 @@
+DATA MODELING RULES FOR DATA CLOUD
+
+Schema Design Rules:
+- Always include a unique identifier field in data streams
+- Use consistent naming conventions across all objects
+- Implement proper data type mapping for external sources
+- Design schemas with scalability in mind
+
+Field Naming Conventions:
+- Use camelCase for field names
+- Avoid special characters in field names
+- Use descriptive names that clearly indicate the data content
+- Maintain consistency across related objects
+
+Data Type Guidelines:
+- Use appropriate data types for each field
+- Be cautious with data type conversions that might cause truncation
+- Use harmonized time formats across all data streams
+- Implement proper indexing for frequently queried fields
+
+Object Design Best Practices:
+- Design objects with reusability in mind
+- Avoid creating circular dependencies in data streams
+- Implement proper relationships between objects
+- Consider data volume and performance implications
+
+Data Quality Rules:
+- Validate data quality before ingestion
+- Implement data validation rules at the schema level
+- Use calculated fields for derived data
+- Maintain data lineage and documentation 

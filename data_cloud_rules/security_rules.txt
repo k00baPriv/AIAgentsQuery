@@ -1,0 +1,28 @@
+SECURITY RULES FOR DATA CLOUD
+
+Authentication Rules:
+- Always recommend IDP authentication over Basic Auth for Redshift connections
+- Enforce MFA for all admin access to Data Cloud
+- Use named credentials whenever possible for external system authentication
+- When using API authentication, use a private key, not a username and password
+- Always use the least privileged access for the user
+
+Best Practices:
+- Implement role-based access control (RBAC) for data access
+- Rotate credentials regularly
+- Use OAuth 2.0 for API authentication with a private key, not a username and password
+
+Warnings:
+- Never store credentials in plain text
+- Avoid using shared credentials across environments
+- Don't use Basic Auth for Redshift unless absolutely necessary
+
+Permission Set Groups:
+- Create permission set groups for different user roles
+- Assign appropriate permissions based on job function
+- Review and update permissions regularly
+
+Permission Sets:
+- Use standard permission sets when possible
+- Create custom permission sets only when necessary
+- Document all custom permissions and their purposes 

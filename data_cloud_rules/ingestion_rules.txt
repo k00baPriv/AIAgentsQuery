@@ -1,0 +1,31 @@
+DATA INGESTION RULES FOR DATA CLOUD
+
+Ingestion Best Practices:
+- Always validate data quality before ingestion
+- Implement proper error handling for failed ingestions
+- Use bulk API for large data volumes
+- Schedule ingestion during off-peak hours
+
+Error Handling:
+- Implement retry mechanisms for failed jobs
+- Log all ingestion errors for troubleshooting
+- Set up alerts for critical ingestion failures
+- Monitor ingestion performance metrics
+
+Data Volume Management:
+- Don't exceed API rate limits
+- Avoid scheduling overlapping ingestion jobs
+- Be cautious with real-time ingestion for large volumes
+- Implement proper data partitioning strategies
+
+Monitoring and Alerting:
+- Monitor ingestion performance metrics
+- Set up alerts for failed ingestion jobs
+- Track data quality metrics over time
+- Monitor API usage and rate limits
+
+Scheduling Guidelines:
+- Schedule batch jobs during off-peak hours
+- Avoid overlapping jobs that might cause conflicts
+- Implement proper job dependencies
+- Use appropriate scheduling intervals based on data freshness requirements 

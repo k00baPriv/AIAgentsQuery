@@ -1,0 +1,31 @@
+SEGMENTATION RULES FOR DATA CLOUD
+
+Segment Creation Rules:
+- Always include clear segment criteria documentation
+- Use incremental processing for large segments
+- Implement proper segment refresh strategies
+- Design segments with reusability in mind
+
+Segment Criteria Guidelines:
+- Use calculated insights for dynamic segmentation
+- Implement proper segment testing before activation
+- Avoid creating too many overlapping segments
+- Use clear and specific criteria for segment definition
+
+Performance Optimization:
+- Use incremental processing for large segments
+- Implement proper segment refresh schedules
+- Be cautious with real-time segment evaluation
+- Monitor segment processing performance
+
+Segment Management:
+- Don't use segments without proper refresh schedules
+- Regularly review and update segment criteria
+- Archive or delete unused segments
+- Document segment purposes and usage
+
+Best Practices:
+- Test segments in development environments first
+- Use descriptive names for segments
+- Implement proper segment versioning
+- Monitor segment performance and usage metrics 
