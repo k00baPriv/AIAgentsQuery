@@ -218,11 +218,9 @@ async def main():
 5. **Implementation Guidance**: Provide specific security implementation recommendations
 
 **Use the MCP Server Tools:**
-- Use the `get_rules` tool to fetch relevant security rules from the data_cloud_rules folder
-- When analyzing security topics, always check for applicable rules using the tool
+- Use the `resource://data_cloud_rules/{category}` resource template to fetch relevant security rules from the data_cloud_rules folder, use category = security
+- When analyzing security topics, always check for applicable rules using the resource template
 - Incorporate the rules into your security recommendations
-- You can get all available rule categories by calling get_rules() without parameters
-- For specific security topics, call get_rules("security") or other relevant categories
 
 **Output Format:**
 - List relevant security topics with brief explanations

@@ -48,21 +48,41 @@ def read_rules_file(category: str) -> str:
 
 # Define a tool (capability) for fetching rules
 @mcp.tool()
-def get_rules(category: str = None) -> str:
-    """Fetch rules created by Solution Architects from data_cloud_rules folder"""
-    try:
-        if category is None:
-            # Return all available categories
-            categories = get_available_categories()
-            if not categories:
-                return "No rule categories found. Please ensure the data_cloud_rules folder exists with .txt files."
+# def get_rules(category: str = None) -> str:
+#     """Fetch rules created by Solution Architects from data_cloud_rules folder"""
+#     try:
+#         if category is None:
+#             # Return all available categories
+#             categories = get_available_categories()
+#             if not categories:
+#                 return "No rule categories found. Please ensure the data_cloud_rules folder exists with .txt files."
             
-            result = "Available rule categories:\n"
-            for cat in categories:
-                result += f"- {cat}\n"
-            result += "\nUse a specific category name to get detailed rules."
-            return result
+#             result = "Available rule categories:\n"
+#             for cat in categories:
+#                 result += f"- {cat}\n"
+#             result += "\nUse a specific category name to get detailed rules."
+#             return result
         
+#         # Read rules for the specified category
+#         rules_content = read_rules_file(category.lower())
+#         if rules_content.startswith("No rules file found"):
+#             # Try to suggest available categories
+#             available_categories = get_available_categories()
+#             if available_categories:
+#                 suggestions = ", ".join(available_categories)
+#                 return f"{rules_content}\n\nAvailable categories: {suggestions}"
+#             else:
+#                 return f"{rules_content}\n\nNo rule categories are currently available."
+        
+#         return rules_content
+        
+#     except Exception as e:
+#         return f"Unexpected error: {str(e)}"
+
+@mcp.resource("resource://data_cloud_rules/{category}")
+def get_rules_resource(category: str) -> str:
+    """Provides rules content from data_cloud_rules folder based on category."""
+    try:
         # Read rules for the specified category
         rules_content = read_rules_file(category.lower())
         if rules_content.startswith("No rules file found"):
